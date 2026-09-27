@@ -1,0 +1,25 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #f1f5f9; color: #334155; line-height: 1.5; }
+.container { max-width: 1000px; margin: 0 auto; padding: 24px; }
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+
+.btn { display: inline-block; padding: 8px 16px; border: none; border-radius: 6px; cursor: pointer; text-decoration: none; font-weight: 500; font-size: 14px; text-align: center; }
+.btn-primary { background: #3b82f6; color: white; }
+.btn-danger { background: #ef4444; color: white; }
+.btn-secondary { background: #e2e8f0; color: #1e293b; }
+
+.products-grid { display: flex; flex-wrap: wrap; gap: 20px; align-items: stretch; }
+.card { flex: 1 1 280px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
+.card h3 { margin: 0 0 8px 0; font-size: 18px; color: #0f172a; }
+.card .price { font-size: 20px; font-weight: bold; color: #10b981; margin: 0 0 12px 0; }
+.card .meta { display: flex; justify-content: space-between; font-size: 14px; color: #64748b; margin-bottom: 16px; flex-grow: 1; }
+.card .actions { display: flex; gap: 8px; margin-top: auto; }
+
+.form-card { background: white; padding: 32px; border-radius: 12px; max-width: 500px; margin: 0 auto; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+.form-group { margin-bottom: 16px; }
+label { display: block; margin-bottom: 6px; font-weight: 500; font-size: 14px; }
+input[type="text"], input[type="number"] { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; }
+.error { color: #ef4444; font-size: 13px; margin-top: 4px; }
+.alert { background: #d1fae5; color: #065f46; padding: 12px 16px; border-radius: 6px; margin-bottom: 24px; border: 1px solid #a7f3d0; }
+.search-form { display: flex; gap: 8px; margin-bottom: 24px; }
+.search-form input { max-width: 300px; }
