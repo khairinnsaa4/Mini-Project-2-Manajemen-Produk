@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* Reset & Box Model Dasar */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  /* Gradien Matcha/Green Tea pastel yang elegan */
+  background: linear-gradient(135deg, #f3f9f4 0%, #e1eedd 100%);
+  min-height: 100vh;
+  color: #445041;
+}
+
+/* Header bergaya Glassmorphism */
+.header-toko {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(121, 159, 107, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-toko h1 {
+  margin: 0;
+  color: #608053;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Container Grid Utama */
+.grid-produk {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+/* Card Kue dengan animasi hover */
+.card-kue {
+  flex: 1 1 260px;
+  max-width: 320px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(121, 159, 107, 0.05);
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.card-kue:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(121, 159, 107, 0.15);
+  border-color: #d1e2c9;
+}
+
+.img-kue {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+.card-kue h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.3rem;
+  color: #2c362a;
+}
+
+.badge {
+  background: #e6f0e2;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #608053;
+  display: inline-block;
+  width: max-content;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.harga {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #608053;
+  margin: 15px 0 5px 0;
+}
+
+.stok {
+  font-size: 0.9rem;
+  color: #7b8878;
+  margin: 0;
+}
+
+/* Area tombol di dalam card */
+.aksi-card {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px dashed #e6eedf;
+}
+
+/* Desain Tombol */
+button,
+.btn-primary,
+.btn-edit,
+.btn-delete {
+  padding: 10px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background: #799f6b;
+  color: white;
+  box-shadow: 0 4px 10px rgba(121, 159, 107, 0.3);
+  width: 100%;
+}
+.btn-primary:hover {
+  background: #608053;
+  transform: scale(1.02);
+}
+
+.btn-edit {
+  background: #eab768;
+  color: #fff;
+  flex: 1;
+}
+.btn-edit:hover {
+  background: #d79c3f;
+}
+
+.btn-delete {
+  background: #e47f7f;
+  color: white;
+  flex: 1;
+}
+.btn-delete:hover {
+  background: #d26565;
+}
+
+/* Desain Form */
+.wadah-form {
+  background: white;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(121, 159, 107, 0.1);
+  border: 1px solid #d1e2c9;
+}
+
+.wadah-form h2 {
+  color: #608053;
+  text-align: center;
+  margin-top: 0;
+}
+.wadah-form label {
+  display: block;
+  margin: 15px 0 8px;
+  font-weight: 600;
+  color: #445041;
+  font-size: 0.95rem;
+}
+.wadah-form input,
+.wadah-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+.wadah-form input:focus,
+.wadah-form select:focus {
+  outline: none;
+  border-color: #799f6b;
+}
+.wadah-form .btn-primary {
+  margin-top: 25px;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+/* Alert Notifikasi */
+.alert {
+  background: #e6f0e2;
+  color: #2c362a;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 600px;
+  border: 1px solid #d1e2c9;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(121, 159, 107, 0.05);
+}
